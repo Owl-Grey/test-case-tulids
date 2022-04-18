@@ -1,0 +1,139 @@
+html, body {
+  margin: 0 0 0 0;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, p, span {
+  margin: 0;
+  padding: 0;
+}
+
+.quiz {
+  overflow: hidden;
+  display: flex;
+  width: 1280px;
+  height: 720px;
+  margin: auto;
+  margin-top: 110px;
+  box-shadow: 10px 10px 9px rgba(0, 0, 0, 0.2), -10px -10px 9px rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+}
+.quiz img {
+  width: 250px;
+  height: 250px;
+}
+
+.question {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+
+.answers {
+  margin-top: 40px;
+  display: flex;
+}
+.answers .answer_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 70px;
+  border: 1px solid #005A9A;
+  border-radius: 35px;
+  margin-right: 20px;
+}
+.answers .answer_button:last-child {
+  margin-right: 0;
+}
+.answers .answer_button:hover {
+  cursor: pointer;
+}
+.answers .answer_button p {
+  font-size: 20px;
+  height: 26px;
+}
+
+.pagination {
+  display: flex;
+}
+.pagination div {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #005A9A;
+  border-radius: 100%;
+  margin-right: 5px;
+}
+.pagination div:last-child {
+  margin-right: 0px;
+}
+
+.active {
+  display: flex !important;
+  animation: start-anim 0.6s;
+}
+
+.choosen {
+  background: #005A9A;
+  color: white;
+  font-weight: bold;
+}
+
+.animate {
+  animation: finish-anim 0.6s;
+}
+
+.fill {
+  background: #005A9A;
+}
+
+@keyframes start-anim {
+  0% {
+    transform: translate(200%);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes finish-anim {
+  0% {
+    transform: translate(0);
+  }
+  100% {
+    transform: translate(-150%);
+  }
+}
+@media screen and (max-width: 1820px) {
+  .quiz {
+    width: 1240px;
+  }
+}
+@media screen and (max-width: 1260px) {
+  .quiz {
+    width: 750px !important;
+  }
+
+  .answers {
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+  }
+
+  .answer_button {
+    margin-right: 0 !important;
+  }
+  .answer_button:last-child {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .quiz {
+    width: 680px !important;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
